@@ -17,6 +17,10 @@
         <div>
             <label for="correo">Correo: </label>
             <input type="email" name="correo">
+
+            @error('correo')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
 
 
