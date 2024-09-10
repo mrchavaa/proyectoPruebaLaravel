@@ -14,8 +14,9 @@ use App\Models\Contacto;
 
         }
 
-        public function formularioContacto(){
-            return view('contacto');
+        public function formularioContacto($tipo_usuario = null){
+            //dd($tipo_usuario);
+            return view('contacto', compact('tipo_usuario'));
         }
 
         public function guardarFormulario(Request $request){
@@ -38,6 +39,12 @@ use App\Models\Contacto;
         $contacto->save();
 
         return redirect('/contacto');
+
+        /*modelos en plural
+        primero crear el controlador
+
+
+        */
 
 
 
